@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        background: #fff;
+        position: relative;
+        min-height: 100vh;
+      }
+      .button-container {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100vw;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        background: black;
+        color: #fff;
+        font-size: 20px;
+        border: 1px solid black;
+        border-radius: 20px;
+        transition: all 150ms ease-in-out;
+        padding: 15px 50px;
+        cursor: pointer;
+      }
+
+      .dark {
+        background: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="button-container">
+        <button>DARK</button>
+      </div>
+    </div>
+    <br />
+
+    <script>
+      function darkMode() {
+        let background = document.querySelector(".container");
+        background.classList.add("dark");
+      }
+
+      let button = document.querySelector("button");
+      button.addEventListener("click", darkMode);
+    </script>
+  </body>
+</html>
